@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int sumEven(int n)
+{
+    if(n <= 0)
+        return 0;
+
+    if(n % 2 == 0)
+        return n + sumEven(n - 1);
+
+    return sumEven(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter N: ");
+    scanf("%d", &n);
+
+    printf("Sum = %d", sumEven(n));
+
+    return 0;
+}
+Sample Output
+Enter N: 10
+Sum = 30
