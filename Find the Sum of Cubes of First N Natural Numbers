@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int sumCubes(int n)
+{
+    if(n == 1)
+        return 1;
+
+    return n*n*n + sumCubes(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter N: ");
+    scanf("%d",&n);
+
+    printf("Sum = %d", sumCubes(n));
+
+    return 0;
+}
+Sample Output
+Enter N: 3
+Sum = 36
