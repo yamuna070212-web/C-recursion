@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void binary(int n)
+{
+    if(n == 0)
+        return;
+
+    binary(n / 2);
+    printf("%d", n % 2);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter Decimal Number: ");
+    scanf("%d", &n);
+
+    printf("Binary = ");
+    binary(n);
+
+    return 0;
+}
+Sample Output
+Enter Decimal Number: 13
+Binary = 1101
