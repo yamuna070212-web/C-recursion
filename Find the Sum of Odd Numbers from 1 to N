@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int sumOdd(int n)
+{
+    if(n <= 0)
+        return 0;
+
+    if(n % 2 != 0)
+        return n + sumOdd(n - 1);
+
+    return sumOdd(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter N: ");
+    scanf("%d", &n);
+
+    printf("Sum = %d", sumOdd(n));
+
+    return 0;
+}
+Sample Output
+Enter N: 10
+Sum = 25
