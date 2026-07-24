@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void printDigits(int n)
+{
+    if(n == 0)
+        return;
+
+    printDigits(n / 10);
+    printf("%d ", n % 10);
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter Number: ");
+    scanf("%d", &n);
+
+    printDigits(n);
+
+    return 0;
+}
+Sample Output
+Enter Number: 12345
+1 2 3 4 5
