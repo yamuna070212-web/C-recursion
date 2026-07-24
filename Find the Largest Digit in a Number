@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int largestDigit(int n)
+{
+    if(n < 10)
+        return n;
+
+    int max = largestDigit(n / 10);
+
+    if(n % 10 > max)
+        return n % 10;
+
+    return max;
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter Number: ");
+    scanf("%d", &n);
+
+    printf("Largest Digit = %d", largestDigit(n));
+
+    return 0;
+}
+Sample Output
+Enter Number: 58392
+Largest Digit = 9
