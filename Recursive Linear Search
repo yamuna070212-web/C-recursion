@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int search(int arr[], int n, int key)
+{
+    if(n == 0)
+        return -1;
+
+    if(arr[n - 1] == key)
+        return n - 1;
+
+    return search(arr, n - 1, key);
+}
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    int key;
+
+    printf("Enter Element: ");
+    scanf("%d", &key);
+
+    int index = search(arr, 5, key);
+
+    if(index == -1)
+        printf("Not Found");
+    else
+        printf("Found at Index %d", index);
+
+    return 0;
+}
+Sample Output
+Enter Element: 40
+Found at Index 3
