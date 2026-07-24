@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int maximum(int arr[], int n)
+{
+    if(n == 1)
+        return arr[0];
+
+    int max = maximum(arr, n - 1);
+
+    if(arr[n - 1] > max)
+        return arr[n - 1];
+
+    return max;
+}
+
+int main()
+{
+    int arr[] = {25, 18, 70, 45, 12};
+
+    printf("Maximum = %d", maximum(arr, 5));
+
+    return 0;
+}
+Sample Output
+Maximum = 70
